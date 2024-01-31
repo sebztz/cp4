@@ -1,0 +1,17 @@
+.navbar {
+  display: flex;
+  background-color: #1c052296;
+  color: rgb(255, 255, 255);
+  justify-content: space-around;
+  height: 7vh;
+  align-items: center;
+  text-align: center;
+}
+
+.connexion {
+  background-color: #1c052296;
+  color: rgb(255, 255, 255);
+  padding: 0.5em;
+  border-radius: 1rem;
+  cursor: pointer;
+}
