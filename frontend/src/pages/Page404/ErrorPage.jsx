@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Parallax from "parallax-js";
 import "./ErrorPage.scss";
 import { Link } from "react-router-dom";
+import yoda from "../../assets/yoda.png";
 
 function ErrorPage() {
   useEffect(() => {
@@ -55,10 +56,13 @@ function ErrorPage() {
 
           <div className="text">
             <article>
-              <p>Tu n'es pas sur la bonne voie!</p>
-              <p>oust!</p>
+              <p>Sur la bonne voie! Tu n'es pas!</p>
+              <p>le bon chemin tu trouveras!</p>
               <Link to="/">
-                <button type="button">Retour sur la bonne voie!</button>
+                <button type="button" className="yoda">
+                  <img src={yoda} alt="yoda" />
+                  Retourner tu dois!
+                </button>
               </Link>
             </article>
           </div>

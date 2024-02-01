@@ -9,9 +9,9 @@ $bg-01: #000000;
 $bg-02: #bccded;
 $bg-03: #ffffff;
 
-$g-01: linear-gradient(90deg, #f4f1d6e0 0%, #020202ce 100%);
+$g-01: linear-gradient(90deg, #cc3434b1 0%, #020202ce 100%);
 $g-02:
-  linear-gradient(90deg, #333df1b3 25%, #ff9100ba 100%),
+  linear-gradient(90deg, #033b01 25%, #77e545ba 100%),
   #fffb0acf 55%;
 
 $cubic: cubic-bezier(0.4, 0.35, 0, 1.53);
@@ -215,7 +215,7 @@ input,
         }
 
         p {
-          color: rgb(82, 75, 75);
+          color: rgb(195, 191, 191);
           font-size: 18px;
           letter-spacing: 0.6px;
           margin-bottom: 30px;
@@ -430,4 +430,8 @@ input,
       }
     }
   }
+}
+.yoda {
+  display: flex;
+  align-items: center;
 }
