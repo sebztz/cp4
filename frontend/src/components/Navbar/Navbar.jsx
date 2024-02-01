@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { useState } from "react";
 import { useUser } from "../../Contexts/ContextUser";
@@ -28,24 +28,21 @@ function Navbar() {
   };
   return (
     <nav className="navbar">
-      <div>
-        <h1>Sébastien LACOUR</h1>
-      </div>
-      <ul>
+      <Link to="/">
+        <div>
+          <h1 className="name">Sébastien LACOUR</h1>
+        </div>
+      </Link>
+      <ul className="mesbuttons">
         <li>
-          <button className="connexion" type="button" onClick={hAccountClick}>
+          <button type="button" className="connexion" onClick={hAccountClick}>
             connexion
           </button>
         </li>
         {user !== null && (
           <li>
-            <button
-              type="button"
-              className="navButton"
-              data-description="Déconnexion 🚫"
-              onClick={hLogout}
-            >
-              <img src={Logout} alt="Se déconnecter" />
+            <button type="button" className="navButton" onClick={hLogout}>
+              <img className="deconnexion" src={Logout} alt="Se déconnecter" />
             </button>
           </li>
         )}

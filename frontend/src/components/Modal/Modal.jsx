@@ -3,8 +3,6 @@ import { PropTypes } from "prop-types";
 import { useNavigate } from "react-router-dom";
 
 import Instance from "../../services/axios";
-import Admin from "../../pages/Admin/Admin";
-import Accueil from "../../pages/Accueil/Accueil";
 import { useUser } from "../../Contexts/ContextUser";
 import "./Modal.scss";
 
@@ -100,7 +98,7 @@ function Modal({ closeModal }) {
               Connexion
             </button>
           </div>
-          {isLogin ? <Admin /> : <Accueil />}
+          {isLogin}
         </form>
       </div>
     </div>
