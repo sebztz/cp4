@@ -49,6 +49,7 @@ class UserManager extends AbstractManager {
 
     return row;
   }
+
   // The U of CRUD - Update operation
   // TODO: Implement the update operation to modify an existing user
 

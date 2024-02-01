@@ -1,6 +1,7 @@
 const express = require("express");
 
 const router = express.Router();
+const { verifyToken } = require("./services/jwt");
 
 const roleControllers = require("./controllers/roleControllers");
 // const validateRole = require("./validators/validateRole");
@@ -11,12 +12,19 @@ router.get("/roles/:id", roleControllers.read);
 // router.put("/roles/:id", validateRole, roleControllers.edit);
 // router.delete("/roles/:id", roleControllers.destroy);
 
-const userControllers = require("./controllers/userControllers");
+const { hashPwd, verifyPwd } = require("./services/argon");
+
+const userController = require("./controllers/userControllers");
 // const validateUser = require("./validators/validateUser");
 
-router.get("/users", userControllers.browse);
-router.get("/users/:id", userControllers.read);
-// router.post("/users", validateUser, userControllers.add);
+router.post("/register", hashPwd, userController.createUser);
+router.post("/login", verifyPwd, userController.login);
+
+router.use(verifyToken);
+
+router.get("/users", userController.browse);
+router.get("/users/:id", userController.read);
+router.post("/users", userController.add);
 // router.put("/users/:id", validateUser, userControllers.edit);
 // router.delete("/users/:id", userControllers.destroy);
 

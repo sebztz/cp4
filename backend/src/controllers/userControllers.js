@@ -45,7 +45,7 @@ const edit = async (req, res, next) => {
   try {
     const { id } = req.params;
     // Insert the user into the database
-    const result = await tables.user.update(id, req.params.id);
+    const result = await tables.user.update(id, req.body);
     console.info(result);
     // Respond with HTTP 204 (No Content)
     if (result == null) {
@@ -69,7 +69,7 @@ const add = async (req, res, next) => {
     const insertId = await tables.user.create(user);
 
     // Respond with HTTP 201 (Created) and the ID of the newly inserted user
-    res.status(201).json({ ...req.body, id: insertId });
+    res.status(201).json({ insertId });
   } catch (err) {
     // Pass any errors to the error-handling middleware
     next(err);
@@ -94,6 +94,23 @@ const destroy = async (req, res, next) => {
     next(err);
   }
 };
+
+// eslint-disable-next-line consistent-return
+const createUser = async (req, res, next) => {
+  try {
+    const isExist = await tables.user.readUserByEmail(req.body.email);
+
+    if (isExist) {
+      return res.status(401).json({ error: "user is already exist" });
+    }
+
+    const user = await tables.user.create(req.body);
+    return res.json({ user });
+  } catch (err) {
+    next(err);
+  }
+};
+
 const login = async (req, res, next) => {
   try {
     const token = jwt.sign({ id: req.user.id }, process.env.APP_SECRET);
@@ -145,6 +162,7 @@ module.exports = {
   edit,
   add,
   destroy,
+  createUser,
   login,
   refresh,
   logout,

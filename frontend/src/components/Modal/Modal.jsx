@@ -3,11 +3,13 @@ import { PropTypes } from "prop-types";
 import { useNavigate } from "react-router-dom";
 
 import Instance from "../../services/axios";
-
+import Admin from "../../pages/Admin/Admin";
+import Accueil from "../../pages/Accueil/Accueil";
 import { useUser } from "../../Contexts/ContextUser";
 import "./Modal.scss";
 
 function Modal({ closeModal }) {
+  const [isLogin, setIsLogin] = useState(true);
   const nav = useNavigate();
 
   const [login, setLogin] = useState({
@@ -90,10 +92,15 @@ function Modal({ closeModal }) {
             />
           </div>
           <div className="btn2">
-            <button type="submit" className="button1">
+            <button
+              type="submit"
+              className="button1"
+              onClick={() => setIsLogin(true)}
+            >
               Connexion
             </button>
           </div>
+          {isLogin ? <Admin /> : <Accueil />}
         </form>
       </div>
     </div>
