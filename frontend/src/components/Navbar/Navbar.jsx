@@ -9,6 +9,10 @@ import "./Navbar.scss";
 import Modal from "../Modal/Modal";
 
 function Navbar() {
+  const openPDF = () => {
+    const pathPDF = "/src/assets/cv-dev.pdf";
+    window.open(pathPDF, "_blank");
+  };
   const { user, setUser } = useUser();
   const nav = useNavigate();
   const [openModal, setOpenModal] = useState(false);
@@ -28,6 +32,12 @@ function Navbar() {
   };
   return (
     <nav className="navbar">
+      <div className="bn-cv">
+        <button type="button" className="bn" onClick={openPDF}>
+          C.V
+        </button>
+      </div>
+
       <Link to="/">
         <div>
           <h1 className="name">Sébastien LACOUR</h1>
