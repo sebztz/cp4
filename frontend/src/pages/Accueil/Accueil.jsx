@@ -20,7 +20,7 @@ function Accueil() {
       if (crawlRef.current) {
         crawlRef.current.classList.add("paused");
       }
-    }, 11000);
+    }, 10250);
 
     // Nettoie le timeout lorsque le composant est démonté
     return () => clearTimeout(timeoutId);
@@ -157,16 +157,16 @@ function Accueil() {
       </table>
       <div className="crawl" ref={crawlRef}>
         <div>
+          <p>En quelque mots :</p>
           <p>
-            It is a period of civil war. Rebel spaceships, striking from a
-            hidden base, have won their first victory against the evil Galactic
-            Empire.
+            Je suis actuellement en formation develloppeur web et webmobile à la
+            WILD CODE SCHOOL.
           </p>
           <p>
-            During the battle, Rebel spies managed to steal secret plans to the
-            Empire's ultimate weapon, the DEATH STAR, an armored space station
-            with enough power to destroy an entire planet.
+            J'ai choisi cette voie pour me reconvertir, car j'ai toujours été
+            attiré par ce domaine.
           </p>
+          <p> </p>
         </div>
       </div>
     </>
