@@ -27,7 +27,7 @@ router.get("/users/:id", userController.read);
 router.post("/users", userController.add);
 // router.put("/users/:id", validateUser, userControllers.edit);
 // router.delete("/users/:id", userControllers.destroy);
-
+router.delete("/logout", userController.logout);
 /* ************************************************************************* */
 
 module.exports = router;

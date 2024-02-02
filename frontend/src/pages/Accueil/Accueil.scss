@@ -1,22 +1,44 @@
+.stackTableau {
+  display: flex;
+  justify-content: center;
+}
+
 .stacks {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   gap: 2rem;
-  transform: translateY(550%);
+  transform: translateY(0%);
+}
+.titre-projets {
+  display: flex;
+  justify-content: center;
+  color: rgb(181, 176, 176);
+  font-size: 1.7rem;
+}
+.projets {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 1rem;
+  color: rgb(246, 242, 242);
+}
+.title {
+  color: rgb(181, 176, 176);
+  font-size: 1.5rem;
 }
 
 .a-long-time-ago {
   display: flex;
   flex-direction: column;
+  padding: 1rem;
   /* cosmétique */
   font-size: 32px;
   color: #4bd5ee;
   /* Animation */
   /* Apparition et disparition progressive */
   opacity: 0;
-  animation-delay: 1s;
-  animation-duration: 120s;
+  animation-delay: 0s;
+  animation-duration: 20s;
   animation-name: a-long-time-ago;
   animation-timing-function: ease-out;
   animation-play-state: 100000s;
@@ -56,7 +78,7 @@
   text-align: justify;
   /* Applique la transformation  */
   transform-origin: center bottom;
-  transform: perspective(300px) rotateX(18deg);
+  transform: perspective(300px) rotateX(22deg);
 }
 
 .crawl > div {

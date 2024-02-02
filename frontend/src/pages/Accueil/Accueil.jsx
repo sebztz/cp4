@@ -31,34 +31,129 @@ function Accueil() {
         <p>A long time ago, in a galaxy far,</p>
         <p>far away..</p>
       </div>
-      <table className="stacks">
-        <tr>
-          <img src={JS} alt="javascript" />
-        </tr>
-        <tr>
-          <img src={CSS} alt="javascript" />
-        </tr>
-        <tr>
-          <img src={Git} alt="javascript" />
-        </tr>
-        <tr>
-          <img src={GitHUB} alt="javascript" />
-        </tr>
-        <tr>
-          <img src={HTML5} alt="javascript" />
-        </tr>
-        <tr>
-          <img src={MySQL} alt="javascript" />
-        </tr>
-        <tr>
-          <img src={nodeJS} alt="javascript" />
-        </tr>
-        <tr>
-          <img src={REACT} alt="javascript" />
-        </tr>
-        <tr>
-          <img src={VSCODE} alt="javascript" />
-        </tr>
+      <h1 className="titre-projets">Projets</h1>
+      <div className="projets">
+        <div>
+          <img src="" alt="" />
+          <h2 className="title">description:</h2>
+          <p>gallerie d'oeuvre d'art sur la Réunion </p>
+          <a
+            href="https://afac974.remote-fr-2.wilders.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            afac974
+          </a>
+          <h2 className="title">équipe</h2>
+          <p>Doriane </p>
+          <p>Clément </p>
+          <p>Francois</p>
+          <p>Sébastien </p>
+        </div>
+
+        <div>
+          <img src="" alt="" />
+          <h2 className="title">description:</h2>
+          <p>jeu de création de potions</p>
+          <a
+            href="https://github.com/WildCodeSchool-2023-09/JS-RemoteFR-SACOD-P2-Vogue-Merry/tree/main"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Elixir Maker - The Game
+          </a>
+          <h2 className="title">équipe</h2>
+          <p>Baris </p>
+          <p>Elie </p>
+          <p>Morgane </p>
+          <p>Christophe </p>
+          <p>Sébastien </p>
+        </div>
+        <div>
+          <img src="" alt="" />
+          <h2 className="title">description:</h2>
+          <p> book des wilders</p>
+          <a
+            href="https://bookofwilders.fr/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            bookofwilders
+          </a>
+          <h2 className="title">équipe</h2>
+          <p>Baptiste </p>
+          <p>Mehdi </p>
+          <p>Jonathan </p>
+          <p>Souhir </p>
+          <p>Sébastien </p>
+        </div>
+        <div>
+          <img src="" alt="" />
+          <h2 className="title">description:</h2>
+          <p>vente objet de noel</p>
+          <a
+            href="https://github.com/Enagrom5/Hackathon-wcs-1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Hackaton vente objet de noel
+          </a>
+          <h2 className="title">équipe</h2>
+          <p>Morgane </p>
+          <p>Elie </p>
+          <p>Souhir </p>
+          <p>Alexandre </p>
+          <p>Sébastien </p>
+        </div>
+      </div>
+      <table className="stackTableau">
+        <tbody className="stacks">
+          <tr>
+            <td>
+              <img src={JS} alt="javascript" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img src={CSS} alt="CSS" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img src={Git} alt="Git" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img src={GitHUB} alt="GitHUB" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img src={HTML5} alt="HTML5" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img src={MySQL} alt="MySQL" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img src={nodeJS} alt="nodeJS" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img src={REACT} alt="REACT" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img src={VSCODE} alt="VSCODE" />
+            </td>
+          </tr>
+        </tbody>
       </table>
       <div className="crawl" ref={crawlRef}>
         <div>

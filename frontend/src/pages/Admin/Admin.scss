@@ -1,0 +1,33 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid;
+  border-color: rgba(255, 0, 0, 0.312);
+  height: 20rem;
+  width: 20rem;
+  border-radius: 2rem;
+  background-color: rgba(0, 0, 0, 0.592);
+  box-shadow: 10px 10px 20px 10px rgba(255, 0, 0, 0.312);
+
+  margin: auto;
+  transform: translateY(70%);
+}
+.h1-myAccount {
+  color: white;
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+.form-myAccount {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+input {
+  border-radius: 0.5rem;
+  padding: 0.3rem;
+}
