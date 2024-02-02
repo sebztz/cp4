@@ -1,0 +1,112 @@
+.stackTableau {
+  display: flex;
+  justify-content: center;
+}
+
+.stacks {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  transform: translateY(0%);
+}
+.titre-projets {
+  display: flex;
+  justify-content: center;
+  color: rgb(181, 176, 176);
+  font-size: 1.7rem;
+}
+.projets {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 1rem;
+  color: rgb(246, 242, 242);
+}
+.title {
+  color: rgb(181, 176, 176);
+  font-size: 1.5rem;
+}
+
+.a-long-time-ago {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  /* cosmétique */
+  font-size: 32px;
+  color: #4bd5ee;
+  /* Animation */
+  /* Apparition et disparition progressive */
+  opacity: 0;
+  animation-delay: 0s;
+  animation-duration: 20s;
+  animation-name: a-long-time-ago;
+  animation-timing-function: ease-out;
+  animation-play-state: 100000s;
+}
+
+@keyframes a-long-time-ago {
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.crawl {
+  /* centrage de l'élément' */
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 800px;
+  margin: 0 0 0 -400px;
+  top: auto;
+  bottom: 0;
+  height: 50em;
+  /* cosmétique */
+  color: #ffff66;
+  font-size: 64px;
+  text-align: justify;
+  /* Applique la transformation  */
+  transform-origin: center bottom;
+  transform: perspective(300px) rotateX(22deg);
+}
+
+.crawl > div {
+  /* positionne la div en bas de l'écran (non visible) */
+  /* l'animation la fait remonter progressivement */
+  position: absolute;
+  top: 100%;
+  animation-delay: 2s; /* Démarre l'animation après la première */
+  animation-duration: 30s;
+  animation-name: crawl;
+  animation-timing-function: linear;
+}
+.crawl.paused > div {
+  animation-play-state: paused;
+}
+
+@keyframes crawl {
+  0% {
+    top: 100%;
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1; /* disparition progressive à la fin */
+  }
+
+  100% {
+    top: 0;
+    opacity: 0;
+  }
+}

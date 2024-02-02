@@ -1,40 +1,21 @@
-import Counter from "./components/Counter";
-import logo from "./assets/logo.svg";
+import { Outlet } from "react-router-dom";
 
-import "./App.css";
+import "./App.scss";
+import Footer from "./components/Footer/Footer";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React !</p>
+    <div>
+      <Navbar />
+      {/* Parallax Star Background HTML */}
+      <div id="stars"> </div>
+      <div id="stars2"> </div>
+      <div id="stars3"> </div>
 
-        <Counter />
-
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {" | "}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+      {/* End Parallax Star Background HTML */}
+      <Outlet />
+      <Footer />
     </div>
   );
 }

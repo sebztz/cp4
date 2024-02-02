@@ -1,0 +1,56 @@
+.navbar {
+  display: flex;
+  background-color: #090909da;
+  color: rgb(255, 255, 255);
+  justify-content: space-around;
+  height: 7vh;
+  align-items: center;
+  text-align: center;
+}
+.mesbuttons {
+  display: flex;
+  gap: 1rem;
+}
+.connexion {
+  background-color: rgb(127, 127, 127);
+  color: rgb(45, 45, 45);
+  padding: 0.5em;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.connexion:hover {
+  box-shadow: 0px -3px 10px 4px #f4f1d6;
+}
+.name {
+  color: #d0d0d0;
+  font-size: 1.5rem;
+  background-color: rgb(127, 127, 127);
+  color: rgb(45, 45, 45);
+  padding: 0.5em;
+  border-radius: 50%;
+}
+.name:hover {
+  box-shadow: 0px -3px 10px 4px #f4f1d6;
+  border-radius: 50%;
+}
+
+.navButton {
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+  height: 2rem;
+}
+.navButton:hover img {
+  box-shadow: 0px -3px 10px 4px #f4f1d6;
+  border-radius: 50%;
+}
+
+.deconnexion {
+  height: 3rem;
+}
